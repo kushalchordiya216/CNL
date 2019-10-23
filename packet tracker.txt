@@ -1,0 +1,20 @@
+1. Drag pieces and make a connections
+2. Ping packets 
+# connect routers with serial ports 
+3. RIPjust means adding different nets in the RIP section 
+4. TAKE TO THE CONSOLE, EXIT CONFIG-IF MODE 
+router ospf 1 
+network 40.0.0.0 0.255.255.255 area 0
+network 60.0.0.0 0.255.255.255 area 0
+save it
+router ospf 1
+network 50.0.0.0 0.255.255.255 area 1
+network 60.0.0.0 0.255.255.255 area 1
+
+bgp 
+bgp 100
+network 70.0.0.0
+network 20.0.0.0
+neighbor 40.0.0.2 remote-as 200
+neighbor 70.0.0.2 remote-as 200
+

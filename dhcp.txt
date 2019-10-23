@@ -1,0 +1,15 @@
+# yum -y install dhcp
+# Open the file /etc/sysconfig/dhcpd
+# DHCPDARGS=eth0
+# DHCP Server Configuration file.
+#   see /usr/share/doc/dhcp*/dhcpd.conf.sample
+#   see dhcpd.conf(5) man page
+# subnet 192.168.1.0 netmask 255.255.255.0 {
+#         option routers                  192.168.1.254;
+#         option subnet-mask              255.255.255.0;
+#         option domain-search              "example.com";
+#         option domain-name-servers       192.168.1.1;
+#         option time-offset              -18000;     # Eastern Standard Time
+# 	range 192.168.1.10 192.168.1.100;
+# }
+# cp /usr/share/doc/dhcp-version-number/dhcpd.conf.sample /etc/dhcp/dhcpd.conf
