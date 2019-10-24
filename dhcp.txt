@@ -11,5 +11,8 @@
 #         option domain-name-servers       192.168.1.1;
 #         option time-offset              -18000;     # Eastern Standard Time
 # 	range 192.168.1.10 192.168.1.100;
+interface ;
+default-lease-time 600;
+max-lease-time 7200; 
 # }
 # cp /usr/share/doc/dhcp-version-number/dhcpd.conf.sample /etc/dhcp/dhcpd.conf
