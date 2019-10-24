@@ -80,17 +80,17 @@ def check_subnet(ip, sub, new_ip):
 
 
 if __name__ == "__main__":
-    ip = input("Enter ip of this machine:")
+    ip = raw_input("Enter ip of this machine:")
     ip_arr = ip.split('.')
     subnet_class = get_class(ip_arr[0])
     mask = get_mask(subnet_class)
     print("subnet class {}, having mask {}".format(subnet_class, mask))
-    num_subnets = int(input("Enter number of subnets:"))
-    bits_borrowed = math.ceil(math.log(num_subnets, 2))
+    num_subnets = int(raw_input("Enter number of subnets:"))
+    bits_borrowed = int(math.ceil(math.log(num_subnets, 2)))
     new_subnet = get_new_subnet(mask.split('.'), bits_borrowed, subnet_class)
     print("new subnet is ", new_subnet)
     check_subnet_ranges(subnet_class, bits_borrowed, num_subnets)
-    new_ip = input("Enter new ip:")
+    new_ip = raw_input("Enter new ip:")
     result = check_subnet(ip, new_subnet, new_ip)
     if result == 0:
         print("Inside same subnet")
